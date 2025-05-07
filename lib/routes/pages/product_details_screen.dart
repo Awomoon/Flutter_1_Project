@@ -57,7 +57,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                   ),
                   const SizedBox(height: 16.0),
                   Text(
-                    '\$${widget.product.priceAfterDiscount?.toStringAsFixed(2)}',
+                    '\$${widget.product.priceAfterDiscount?.toStringAsFixed(2) ?? widget.product.price.toStringAsFixed(2)}',
                     style: GoogleFonts.lexend(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,

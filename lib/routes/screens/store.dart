@@ -38,12 +38,12 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Image.network(
-                //   product.image,
-                //   height: 120,
-                //   width: double.infinity,
-                //   fit: BoxFit.cover,
-                // ),
+                Image.network(
+                  product.image,
+                  height: 120,
+                  width: double.infinity,
+                  fit: BoxFit.cover,
+                ),
                 const SizedBox(height: 8.0),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 8.0),
@@ -71,7 +71,7 @@ class HomeScreen extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 8.0),
                   child: Text(
-                    '\$${product.priceAfterDiscount?.toStringAsFixed(2)}',
+                    '\$${product.priceAfterDiscount?.toStringAsFixed(2) ?? product.price.toStringAsFixed(2)}',
                     style: GoogleFonts.lexend(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
@@ -170,8 +170,8 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  top: 190,
-                  left: 20,
+                  top: 185,
+                  left: 15,
                   child: Text(
                     user != null
                         ? 'Welcome ${user.username} to Moon-Store.'

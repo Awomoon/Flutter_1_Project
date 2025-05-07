@@ -41,7 +41,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   Text(user.email,
                       style: GoogleFonts.lexend(
                           fontWeight: FontWeight.bold, color: Colors.white)),
-                  SizedBox(height: 40),
+                  SizedBox(height: 80),
                   ListTile(
                     leading: Icon(Icons.settings),
                     title: Text('Settings'),
